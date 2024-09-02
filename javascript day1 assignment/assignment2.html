@@ -1,0 +1,51 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h3>Arithmetic operations </h3>
+		<hr/> 
+		
+		<br/><br/>
+        Number 1:<input type="number" id="num1" />
+        <br><br>
+         Number 2:<input type="number" id="num2" />
+        <br>
+        <input type="button" onclick="f1(event)" value="+" id="arthimetic" />
+        <input type="button" onclick="f1(event)" value="-" id="arthimetic1" />
+        <input type="button" onclick="f1(event)" value="*" id="arthimetic2" />
+        <input type="button" onclick="f1(event)" value="/" id="arthimetic3" />
+	 	<p id="p1"></p>
+		<script> 	
+				
+			  function f1( event  ) 
+			  {	 	 
+				 let num1=parseFloat(document.getElementById("num1").value);
+                 let num2=parseFloat(document.getElementById("num2").value);
+                 let add1=num1+num2;
+                 let sub1=num1-num2;
+                 let mul1=num1*num2;
+                 let div1=num1/num2;
+                 let answer1=event.target.id;
+                 if(answer1=="arthimetic"){
+                    document.getElementById("p1").innerHTML="Sum:" +add1;
+                
+                 }
+                 else if(answer1=="arthimetic1"){
+                    
+                    document.getElementById("p1").innerHTML="Subraction:" +sub1;
+                 }
+                 else if(answer1=="arthimetic2"){
+                    document.getElementById("p1").innerHTML="Multiplication:" +mul1;
+                 }
+                 else if(answer1=="arthimetic3"){
+                    document.getElementById("p1").innerHTML="Division:" +div1;
+                 }
+
+
+			  }	
+			  
+			  
+		 
+		</script>  
+	</body>
+</html>

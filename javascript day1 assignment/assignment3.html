@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <h1>product details</h1>
+    </head>
+    <body>
+        product name:<input type="text" id="t1"><br>
+        unit price : <input type="text" id="t2"><br>
+        quantity: <input type="number" id="t3"><br>
+        <input type="button"  onclick="q1()" value="get total"/>
+        <p id="p1"></p>
+         
+
+
+    </body>
+    <script>
+        function q1(){
+            let num1=document.getElementById("t1").value;
+            let num2=parseInt(document.getElementById("t2").value);
+            let quantity=parseInt(document.getElementById("t3").value);
+            let num;
+            if(quantity>10){
+                num=num2*quantity*0.1;
+            }
+            if(quantity>20){
+                num=num2*quantity*0.2;
+            }
+            if(quantity>30){
+                num=num2*quantity*0.3;
+            }
+            else{
+                num=num2*quantity;
+
+            }
+       document.getElementById("p1").innerHTML="total sum:" +num;
+        
+
+
+
+        }
+    </script>
+</html>
